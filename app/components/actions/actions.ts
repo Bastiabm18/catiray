@@ -1,5 +1,6 @@
 // components/actions/actions.ts
 
+"use server";
 import { 
     collection, 
     getDocs, 
