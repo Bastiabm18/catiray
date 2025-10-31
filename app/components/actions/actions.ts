@@ -11,7 +11,7 @@ import {
     QuerySnapshot,
     FieldPath // Necesario para ordenar por el ID del documento
 } from 'firebase/firestore';
-import { getFirebaseFirestore } from '@/lib/firebaseConfig';
+import { getFirebaseFirestore } from '@/lib/firebase/firebaseConfig';
 /**
  * Define la estructura de datos que esperamos de la colección 'publicacion'.
  */

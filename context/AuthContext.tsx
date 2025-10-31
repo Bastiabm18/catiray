@@ -3,7 +3,7 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { onAuthStateChanged, User, Auth } from 'firebase/auth';
-import { getFirebaseAuth } from '../lib/firebaseConfig';
+import { getFirebaseAuth } from '../lib/firebase/firebaseConfig';
 import Spinner from '@/app/components/Spinner';
 
 // Define la interfaz para el valor del contexto

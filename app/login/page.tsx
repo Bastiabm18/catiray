@@ -11,7 +11,7 @@ import NeonSign from '../components/NeonSign';
 // Importa tus React Icons
 import { FiMail, FiLock, FiLogIn, FiUserPlus, FiXCircle } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc'; // Icono de Google para el botón
-import { getFirebaseAuth, getFirebaseFirestore, GoogleAuthProvider, signInWithPopup } from '@/lib/firebaseConfig';
+import { getFirebaseAuth, getFirebaseFirestore, GoogleAuthProvider, signInWithPopup } from '@/lib/firebase/firebaseConfig';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
 
 export default function LoginPage() {

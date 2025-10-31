@@ -1,7 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import { cookies } from "next/headers";
 //import { adminAuth, adminFirestore } from "../../../../lib/firebase-admin";
-import { getAdminInstances } from '@/lib/firebase-admin';
+import { getAdminInstances } from '@/lib/firebase/firebase-admin';
 
 import { DocumentSnapshot } from 'firebase-admin/firestore';
 

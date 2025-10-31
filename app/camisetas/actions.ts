@@ -13,7 +13,7 @@ import {
     getDoc
 } from 'firebase/firestore';
 // Reemplaza esto con tu ruta correcta al SDK cliente de Firebase
-import { getFirebaseFirestore } from '@/lib/firebaseConfig';
+import { getFirebaseFirestore } from '@/lib/firebase/firebaseConfig';
 
 /**
  * Define la estructura de datos para una publicación/camiseta.
