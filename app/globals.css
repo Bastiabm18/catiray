@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+html {
+
+  font-size: 16px !important;
+}
 /* VARIABLES GLOBALES */
 :root {
   --background: #ffffff;
@@ -38,8 +43,4 @@ body {
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   margin: 0;
   padding: 0;
-}
-html {
-
-  font-size: 16px;
 }
