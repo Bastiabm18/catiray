@@ -25,19 +25,17 @@ const geistMono = Geist_Mono({
 });
 
 // Fuentes Adicionales
-
 const alfaSlabOne = Alfa_Slab_One({
-  weight: "400", // Alfa Slab One solo tiene peso 400
+  weight: "400",
   variable: "--font-alfa-slab-one",
   subsets: ["latin"],
 });
 
 const brunoAceSc = Bruno_Ace_SC({
-  weight: "400", // Bruno Ace SC solo tiene peso 400
+  weight: "400",
   variable: "--font-bruno-ace-sc",
   subsets: ["latin"],
 });
-
 
 const caveat = Caveat({
   variable: "--font-caveat",
@@ -45,17 +43,16 @@ const caveat = Caveat({
 });
 
 const bangers = Bangers({
-  weight: "400", // Bangers solo tiene peso 400
+  weight: "400",
   variable: "--font-bangers",
   subsets: ["latin"],
 });
 
 const goldman = Goldman({
-  weight: ["400", "700"], // Goldman tiene pesos 400 y 700
+  weight: ["400", "700"],
   variable: "--font-goldman",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "Catiray FC",
@@ -70,22 +67,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // Se concatenan todas las variables de fuente en el className del <body>
   return (
-    <html lang="en" style={{ fontSize: '16px' }}>
+    <html
+      lang="en"
+      className={`
+        ${geistSans.variable}
+        ${geistMono.variable}
+        ${alfaSlabOne.variable}
+        ${brunoAceSc.variable}
+        ${caveat.variable}
+        ${bangers.variable}
+        ${goldman.variable}
+      `.trim()}
+      style={{ fontSize: "16px" }}
+    >
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
       </head>
-      <body
-        className={`${brunoAceSc.variable} ${geistSans.variable} ${geistMono.variable} ${alfaSlabOne.variable} ${caveat.variable} ${bangers.variable} ${goldman.variable} antialiased`}
-      >
-
+      <body className="antialiased">
         <AuthProvider>
-          <LayoutManager>
-
-          {children}
-          </LayoutManager>
-    
+          <LayoutManager>{children}</LayoutManager>
         </AuthProvider>
       </body>
     </html>

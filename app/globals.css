@@ -1,48 +1,43 @@
 /* app/globals.css */
 @import "tailwindcss";
 
-/* ===== RESET + BASE (OBLIGATORIO EN TAILWIND V4) ===== */
+/* ===== RESET + BASE (OBLIGATORIO PARA TAILWIND V4 EN PRODUCCIÓN) ===== */
 @layer base {
   *, *::before, *::after {
     box-sizing: border-box;
-  }
-
-  * {
     margin: 0;
     padding: 0;
   }
 
   html {
     -webkit-text-size-adjust: 100%;
-    font-size: 16px !important;     /* ← FIJO EN PRODUCCIÓN */
     line-height: 1.5;
     scroll-behavior: smooth;
   }
 
   body {
-    margin: 0;
-    font-size: 1rem; /* 16px */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  img, picture, video, canvas, svg {
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
     display: block;
     max-width: 100%;
   }
 
-  input, button, textarea, select {
+  input,
+  button,
+  textarea,
+  select {
     font: inherit;
-  }
-
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
   }
 }
 
-/* ===== TUS ESTILOS (100% MANTENIDOS) ===== */
-
-/* VARIABLES GLOBALES */
+/* ===== VARIABLES GLOBALES ===== */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -56,24 +51,40 @@
   }
 }
 
-/* COLORES PERSONALIZADOS */
-.bg-catiray-red { background-color: #dd1d2b; }
-.bg-catiray-gold { background-color: #ab7f38; }
+/* ===== COLORES PERSONALIZADOS ===== */
+.bg-catiray-red {
+  background-color: #dd1d2b;
+}
+.bg-catiray-gold {
+  background-color: #ab7f38;
+}
 
-/* SAFE AREA */
+/* ===== SAFE AREA ===== */
 .pb-safe {
   padding-bottom: calc(var(--safe-area-inset-bottom) + 1rem);
 }
 
-/* FUENTES PERSONALIZADAS */
-.font-alfa { font-family: 'Alfa Slab One', serif; }
-.font-bangers { font-family: 'Bangers', cursive; }
-.font-bruno-ace-sc { font-family: 'Bruno Ace SC', cursive; }
-.font-caveat { font-family: 'Caveat', cursive; }
-.font-heading { font-family: 'Montserrat', sans-serif; }
-.font-inter { font-family: 'Inter', sans-serif; }
+/* ===== FUENTES PERSONALIZADAS ===== */
+.font-alfa {
+  font-family: var(--font-alfa-slab-one), serif;
+}
+.font-bangers {
+  font-family: var(--font-bangers), cursive;
+}
+.font-bruno-ace-sc {
+  font-family: var(--font-bruno-ace-sc), cursive;
+}
+.font-caveat {
+  font-family: var(--font-caveat), cursive;
+}
+.font-heading {
+  font-family: "Montserrat", sans-serif;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
 
-/* BODY BASE */
+/* ===== BODY BASE ===== */
 body {
   background: var(--background);
   color: var(--foreground);
