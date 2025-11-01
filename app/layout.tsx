@@ -79,7 +79,7 @@ export default function RootLayout({
         ${bangers.variable}
         ${goldman.variable}
       `.trim()}
-      style={{ fontSize: "12px" }}
+      
     >
       <head>
         <meta
@@ -87,7 +87,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased text-sm">
         
         <AuthProvider>
           <LayoutManager>{children}</LayoutManager>
