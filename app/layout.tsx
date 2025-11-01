@@ -10,6 +10,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import Nav from "./components/Nav";
 import NavStick from "./components/NavStick";
 import LayoutManager from "./components/layoutManager";
+import FontProvider from "./font-provider";
 
 // --- Configuración de fuentes ---
 
@@ -88,6 +89,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
+        <FontProvider />
         <AuthProvider>
           <LayoutManager>{children}</LayoutManager>
         </AuthProvider>
