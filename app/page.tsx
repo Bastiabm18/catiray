@@ -12,23 +12,23 @@ export default function Home() {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center md:gap-36 ">
 
-<section className="w-full h-[99vh] flex items-center justify-center">
+<section className="w-full  py-20 flex items-center justify-center">
     <News />
 
 </section>
-<section className="w-full h-[99vh] flex items-center justify-center">
+<section className="w-full  py-20 flex items-center justify-center">
    <NextGame />
 </section>
-<section className="w-full h-full flex items-center justify-center">
+<section className="w-full py-20 h-full flex items-center justify-center">
   <Camisetas />
   </section>
-<section className="w-full h-full flex items-center justify-center">
+<section className="w-full py-20 h-full flex items-center justify-center">
     <Sponsors />
 </section>
-<section className="w-full h-full flex items-center justify-center">
+<section className="w-full py-20 h-full flex items-center justify-center">
    <Suscribe />
 </section>
-<section className="w-full h-full flex items-center justify-center">
+<section className="w-full py-20 h-full flex items-center justify-center">
     <Footer />
 </section>
     </div>

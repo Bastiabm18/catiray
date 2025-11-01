@@ -1,24 +1,10 @@
 @import "tailwindcss";
 
-
+/* VARIABLES GLOBALES */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-.bg-catiray-red {
-    background-color: #dd1d2b;
-}
-
-.bg-catiray-gold {
-    background-color: #ab7f38;
-
-}
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,33 +14,28 @@
   }
 }
 
-.font-alfa {
-  font-family: 'Alfa Slab One', serif;
-}
-.font-bangers {
-  font-family: 'Bangers', cursive;
-}
-.font-bruno-ace-sc {
-  font-family: 'Bruno Ace SC', cursive;
+/* COLORES PERSONALIZADOS */
+.bg-catiray-red { background-color: #dd1d2b; }
+.bg-catiray-gold { background-color: #ab7f38; }
+
+/* SAFE AREA */
+.pb-safe {
+  padding-bottom: calc(var(--safe-area-inset-bottom) + 1rem);
 }
 
-.font-caveat {
-  font-family: 'Caveat', cursive;
-}
-.font-heading {
-  font-family: 'Montserrat', sans-serif;
-}
-.font-inter {
-  font-family: 'Inter', sans-serif;
-}
+/* FUENTES PERSONALIZADAS */
+.font-alfa { font-family: 'Alfa Slab One', serif; }
+.font-bangers { font-family: 'Bangers', cursive; }
+.font-bruno-ace-sc { font-family: 'Bruno Ace SC', cursive; }
+.font-caveat { font-family: 'Caveat', cursive; }
+.font-heading { font-family: 'Montserrat', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
 
-/* * CORRECCIÓN CLAVE:
-* Quitamos la fuente fija 'Arial' y usamos la variable CSS de Geist. 
-* Esto permite que las clases de Tailwind (como font-bangers) funcionen
-* y sobrescriban el valor base.
-*/
+/* BODY BASE */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans); /* <-- USAR LA VARIABLE NEXT/FONT */
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
 }
