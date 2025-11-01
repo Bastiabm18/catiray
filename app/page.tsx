@@ -10,13 +10,13 @@ import Camisetas from "./components/Camisetas";
 
 export default function Home() {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center ">
+    <div className="w-full h-full flex flex-col items-center justify-center md:gap-36 ">
 
-<section className="w-full h-full flex items-center justify-center">
+<section className="w-full h-[99vh] flex items-center justify-center">
     <News />
 
 </section>
-<section className="w-full h-full flex items-center justify-center">
+<section className="w-full h-[99vh] flex items-center justify-center">
    <NextGame />
 </section>
 <section className="w-full h-full flex items-center justify-center">
