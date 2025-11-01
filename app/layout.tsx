@@ -9,6 +9,7 @@ import { AuthProvider } from "@/context/AuthContext";
 
 import Nav from "./components/Nav";
 import NavStick from "./components/NavStick";
+import LayoutManager from "./components/layoutManager";
 
 // --- Configuración de fuentes ---
 
@@ -75,10 +76,13 @@ export default function RootLayout({
       <body
         className={`${brunoAceSc.variable} ${geistSans.variable} ${geistMono.variable} ${alfaSlabOne.variable} ${caveat.variable} ${bangers.variable} ${goldman.variable} antialiased`}
       >
-        <NavStick />
+
         <AuthProvider>
+          <LayoutManager>
+
           {children}
-          <Nav />
+          </LayoutManager>
+    
         </AuthProvider>
       </body>
     </html>

@@ -2,7 +2,7 @@
 
 'use client'; // ¡Necesario para useState, Framer Motion y manejo de formularios!
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
@@ -13,8 +13,12 @@ import { FiMail, FiLock, FiLogIn, FiUserPlus, FiXCircle } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc'; // Icono de Google para el botón
 import { getFirebaseAuth, getFirebaseFirestore, GoogleAuthProvider, signInWithPopup } from '@/lib/firebase/firebaseConfig';
 import { doc, getDoc, setDoc } from 'firebase/firestore';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@/context/AuthContext';
 
 export default function LoginPage() {
+  const router = useRouter();
+  const {user,loading} = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
@@ -29,6 +33,12 @@ export default function LoginPage() {
     hover: { scale: 1.05 },
     tap: { scale: 0.95 },
   };
+
+   useEffect(() => {
+    if (!loading && user) {
+      router.push(`/dashboard`);
+    }
+  }, [user, loading, router]);
 
   // Función placeholder para manejar el login con email/password
   const handleEmailLogin = (e: React.FormEvent) => {
