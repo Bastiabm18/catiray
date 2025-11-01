@@ -1,7 +1,7 @@
 /* app/globals.css */
 @import "tailwindcss";
 
-/* RESET BÁSICO */
+/* ===== RESET + BASE (OBLIGATORIO PARA TAILWIND V4 EN PRODUCCIÓN) ===== */
 @layer base {
   *, *::before, *::after {
     box-sizing: border-box;
@@ -10,24 +10,34 @@
   }
 
   html {
-    font-size: 16px;
-    line-height: 1.5;
     -webkit-text-size-adjust: 100%;
+    line-height: 1.5;
+    scroll-behavior: smooth;
   }
 
   body {
-    margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  img, picture, video, canvas, svg {
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
     display: block;
     max-width: 100%;
   }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
 }
 
-/* VARIABLES GLOBALES */
+/* ===== VARIABLES GLOBALES ===== */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -41,26 +51,42 @@
   }
 }
 
-/* COLORES PERSONALIZADOS */
-.bg-catiray-red { background-color: #dd1d2b; }
-.bg-catiray-gold { background-color: #ab7f38; }
+/* ===== COLORES PERSONALIZADOS ===== */
+.bg-catiray-red {
+  background-color: #dd1d2b;
+}
+.bg-catiray-gold {
+  background-color: #ab7f38;
+}
 
-/* SAFE AREA */
+/* ===== SAFE AREA ===== */
 .pb-safe {
   padding-bottom: calc(var(--safe-area-inset-bottom) + 1rem);
 }
 
-/* FUENTES PERSONALIZADAS (usa nombres de Google Fonts) */
-.font-alfa { font-family: 'Alfa Slab One', serif; }
-.font-bangers { font-family: 'Bangers', cursive; }
-.font-bruno-ace-sc { font-family: 'Bruno Ace SC', cursive; }
-.font-caveat { font-family: 'Caveat', cursive; }
-.font-heading { font-family: 'Montserrat', sans-serif; }
-.font-inter { font-family: 'Inter', sans-serif; }
+/* ===== FUENTES PERSONALIZADAS ===== */
+.font-alfa {
+  font-family: var(--font-alfa-slab-one), serif;
+}
+.font-bangers {
+  font-family: var(--font-bangers), cursive;
+}
+.font-bruno-ace-sc {
+  font-family: var(--font-bruno-ace-sc), cursive;
+}
+.font-caveat {
+  font-family: var(--font-caveat), cursive;
+}
+.font-heading {
+  font-family: "Montserrat", sans-serif;
+}
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
 
-/* BODY BASE */
+/* ===== BODY BASE ===== */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Geist', 'Geist Mono', ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
