@@ -1,13 +1,9 @@
 @import "tailwindcss";
 
 
-@layer base {
-  html {
-    zoom: 1 !important;
-    -moz-transform: scale(1) !important;
-    transform: scale(1) !important;
-    font-size: 16px !important;
-  }
+html {
+
+  font-size: 16px !important;
 }
 /* VARIABLES GLOBALES */
 :root {
