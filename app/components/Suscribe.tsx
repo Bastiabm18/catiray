@@ -36,7 +36,7 @@ const Suscribe: React.FC = () => {
 
     return (
         // Contenedor principal: Fondo rojo oscuro con alturas responsivas
-        <div className="w-full h-[50vh] lg:h-[60vh] relative bg-catiray-red flex flex-col items-center justify-center p-4 md:p-8 font-inter">
+        <div className="w-full h-[50vh] lg:h-[75vh] relative bg-catiray-red flex flex-col items-center justify-center p-4 md:p-8 font-inter">
             
             {/* Logo del equipo */}
             <motion.div
